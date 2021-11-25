@@ -22,7 +22,6 @@ def produtos():
             if rs[0] > 0:
                 print("\nCódigo de produto já cadastrado!\nDescrição:", rs[1],"\nSaldo:", rs[2],"\nSaldo mínimo:", rs[3],"\nPreço de custo:", rs[5],"\nPreço de venda:", rs[4])
                 
-##########################
                 op = input("\nDeseja (alt)erar ou (exc)luir o produto?\n(000) Para voltar sem alterar\n>> ").lower()
             
                 if op == "alt":
@@ -79,10 +78,6 @@ def produtos():
                 else:
                     print("\nOpção inválida!")
                 
-                
-                
-##########################
-                
                 continue
             
             while True:
@@ -95,19 +90,18 @@ def produtos():
                     
                     if not((dsprod == "") or (saldo < 0) or (sldmin < 0)):
                         break
-                                
                     else:
                         print(erro_p)
                         
                 except:
                     print(erro_p)
                             
-    
             try: 
                 cursor.execute("INSERT INTO produto (codprod, dsprod, saldo, sldmin, prvenda, prcusto) VALUES ("+codprod+","+"'"+dsprod+"'"+","+str(saldo)+","+str(sldmin)+","+str(prcusto)+","+str(prvenda)+");")
                 conn.commit()
                 conn.close
                 print("\nProduto cadastrado com sucesso!")
+            
             except:
                 print(erro_p, "\nOu possível erro na comunicação com o banco de dados.")
                         

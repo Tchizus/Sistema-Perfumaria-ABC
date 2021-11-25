@@ -2,6 +2,9 @@ import sqlite3
 from funcionalidades import *
 from funcionarios import *
 from produtos import *
+"""    
+O processo e as informações de login deveriam receber os devidos tratamentos criptograficos, para armazenamento seguro no banco de dados. Mas para esta tarefa não quis utilizar de bibliotecas que não fossem instaladas por padrão exceto o sqlite3 que é obrigatória para a atividade e que eu tenho certeza absoluta de que o professor possui instalada.
+"""
 
 # Conexão com SGDB
 conn = sqlite3.connect("Perfumaria.db")
@@ -13,10 +16,12 @@ print("""===============================================
 ===============================================""")
 
 while True:
-    
+
     login = input("\n(000) para sair\nLogin: ")
+    
     if login == "000":
         break
+    
     senha = input("Senha: ")
     
     try: 
