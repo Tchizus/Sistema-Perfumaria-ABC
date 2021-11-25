@@ -6,6 +6,7 @@
 2. `funcionalidades.py` possui as funções das funcionalidades requisitadas no trabalho.
 3. `funcionarios.py` possui o pedaço de gerencimento do banco de dados referente ao cadastro dos funcionários e `produtos.py` é sobre o gerenciamento do banco de dados dos produtos.
 4. `Perfumaria.db` é o banco de dados fornecido pelo professor com a maior parte dos dados já inseridos.
+5. Para utilizar a aprte de gerenciamento dos funcionário, utilize o login `ADMIN` com a senha `admin`
 
 ## O que foi pedido pelo professor: 
 
